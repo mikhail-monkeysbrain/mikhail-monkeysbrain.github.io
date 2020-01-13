@@ -1,0 +1,116 @@
+.benefits
+  position relative
+
+  h2
+    color #26272d
+    font-family $hLight
+    font-size 4rem
+    font-weight 300
+    line-height 5.3rem
+    letter-spacing 1.6px
+    text-align center
+    margin-top 200px
+
+  &__container
+    display flex
+    flex-wrap: wrap
+    width 1133px
+    margin 0 auto
+    background #fff
+    +media(1440px)
+      width 1050px
+    +media(1200px)
+      width calc(100% - 40px)
+  &__item
+    width 50%
+    padding 0 30px
+    display flex
+    flex-direction: column
+    justify-content center
+    height 286px
+    z-index 1
+    margin-bottom 1px
+    margin-top -1px
+    +media(1440px)
+      height 265px
+    h3
+      color #ffffff
+      font-family $mainFont
+      font-size 2.2rem
+      font-weight 700
+      line-height 2.6rem
+      text-transform uppercase
+      margin 0
+      padding 0
+    p
+      color #ffffff
+      font-family $mainFont
+      font-size 1.6rem
+      font-weight 400
+      line-height 2.4rem
+    &:first-child
+      background url(../img/content/b1.png) center no-repeat
+      background-size 100%
+      transition: .5s 1s ease-in all
+      opacity 0
+      transform: translatey(-100%)
+      position relative
+      z-index 3
+      +media(1200px)
+        background-size cover
+      .animated &
+        opacity 1
+        transform: translate(0) !important
+    &:nth-child(2)
+      background url(../img/content/b2.png) center no-repeat
+      background-size 100%
+      transition: .5s 1s ease-in all
+      opacity 0
+      transform: translatey(-100%)
+      position relative
+      z-index 3
+      +media(1200px)
+        background-size cover
+      .animated &
+        opacity 1
+        transform: translate(0) !important
+    &:nth-child(3)
+      background url(../img/content/b3.png) center no-repeat
+      background-size 100%
+      transition: .5s 1.5s ease-in all
+      opacity 0
+      transform: translatey(-200%)
+      position relative
+      z-index 2
+      +media(1200px)
+        background-size cover
+      .animated &
+        opacity 1
+        transform: translate(0) !important
+    &:nth-child(4)
+      background url(../img/content/b4.png) center no-repeat
+      background-size 100%
+      transition: .5s 1.5s ease-in all
+      opacity 0
+      transform: translatey(-200%)
+      position relative
+      z-index 2
+      +media(1200px)
+        background-size cover
+      .animated &
+        opacity 1
+        transform: translate(0) !important
+    &:nth-last-child(1)
+      width 100%
+      background url(../img/content/b5.png) center no-repeat
+      background-size 100%
+      transition: .5s 2s ease-in all
+      opacity 0
+      transform: translatey(-300%)
+      position relative
+      z-index 1
+      +media(1200px)
+        background-size cover
+      .animated &
+        opacity 1
+        transform: translate(0) !important

@@ -1,0 +1,18 @@
+extends ../base/layout
+
+block header
+  include ../blocks/header
+block main
+  main.grid
+    include ../blocks/top
+    include ../blocks/logistic
+    include ../blocks/cargo
+    include ../blocks/trust
+    include ../blocks/benefits
+    include ../blocks/faq
+    include ../blocks/work
+    include ../blocks/map
+  include ../blocks/footer
+
+block scripts
+  include ../base/scripts

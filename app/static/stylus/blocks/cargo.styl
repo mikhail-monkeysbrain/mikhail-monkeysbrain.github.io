@@ -1,0 +1,200 @@
+.cargo
+  background #fefae1
+  padding-top 60px
+  position relative
+
+  &-y
+    width 311px
+    height 220px
+    background url(../img/content/cargo-y.png) center no-repeat
+    background-size cover
+    position: absolute
+    right: 30px
+    top: -80px
+    transition: 1s 1s ease all
+    opacity 0
+    transform: rotate(-720deg)
+    .animated &
+      opacity 1
+      transform: rotate(0)
+    +media(1200px)
+      display none
+
+  &-left,
+  &-right
+    position absolute
+    width 320px
+    height 212px
+    background url(../img/content/cargo.png) center no-repeat
+    background-size cover
+    z-index 0
+    +media(1200px)
+      display none
+  &-left
+    top -70px
+    left -200px
+    transition: 2s 1.5s ease all
+    opacity 0
+    transform: rotate(1020deg)
+    .animated &
+      opacity 1
+      transform: rotate(0)
+  &-right
+    bottom -150px
+    right -200px
+    transition: 1s 2s ease all
+    opacity 0
+    transform: scale(0)
+    .animated &
+      opacity 1
+      transform: scale(1)
+
+  h2
+    color #26272d
+    font-family $hLight
+    font-size 4rem
+    font-weight 300
+    letter-spacing 1.6px
+    text-align center
+    margin-bottom 17px
+    padding-bottom -10px
+  h3
+    color #26272d
+    font-family $hLight
+    font-size 2rem
+    font-weight 300
+    line-height 5.3rem
+    letter-spacing 0.8px
+    text-align center
+
+  &__container
+    position relative
+    max-width 1137px
+    width 100%
+    margin 0 auto
+    display flex
+    justify-content space-between
+    top 40px
+    +media(1440px)
+      width 1050px
+    +media(1200px)
+      max-width 100%
+      height 650px
+      overflow-x: auto
+      overflow-y: hidden
+
+  &__item
+    width 357px
+    height 673px
+    border-radius: 10px
+    position relative
+    transition: $middle
+    position relative
+    z-index 1
+    +media(1440px)
+      width 340px
+      height 540px
+      padding 0 20px
+    .btn
+      opacity 0
+      transition: $fast
+    &:hover
+      .btn
+        opacity 1
+    &:first-child
+      background url(../img/content/cargo-1.jpg) center no-repeat
+      background-size 100%
+      transition: 1.5s 1.5s ease all
+      opacity 0
+      transform: translateX(50%) translateY(-100%)
+      +media(1200px)
+        margin-left 40px
+      .animated &
+        opacity 1
+        transform: translate(0)
+      &:hover
+        background-size 110%
+    &:nth-child(2)
+      top 40px
+      background url(../img/content/cargo-2.jpg) center no-repeat
+      background-size 100%
+      transition: 1.5s 2s ease all
+      opacity 0
+      transform: translateX(0%) translateY(-100%)
+      +media(1200px)
+        margin-left 20px
+        margin-right 20px
+      .animated &
+        opacity 1
+        transform: translate(0)
+      &:hover
+        background-size 110%
+    &:nth-child(3)
+      top 80px
+      background url(../img/content/cargo-3.jpg) center no-repeat
+      background-size 100%
+      transition: 1.5s 2.5s ease all
+      opacity 0
+      transform: translateX(-50%) translateY(-100%)
+      +media(1200px)
+        margin-right 40px
+      .animated &
+        opacity 1
+        transform: translate(0)
+      &:hover
+        background-size 110%
+
+  &__title
+    color #ffffff !important
+    font-size 2.5rem !important
+    font-weight 400 !important
+    line-height 3.8rem !important
+    text-transform uppercase !important
+    top 55px
+    position relative
+  &__subtitle
+    color #ffffff
+    font-family $mainFont
+    font-size 1.3rem
+    font-weight 500
+    line-height 3.8rem
+    text-transform uppercase
+    text-align center
+    top 25px
+    position relative
+
+  &__separator
+    width 248px
+    height 5px
+    background url(../img/icons/line.png) center no-repeat
+    background-size cover
+    margin-top 15px
+    position relative
+    margin 0 auto
+    top 15px
+    filter: grayscale(1) brightness(1000%)
+    opacity 0.6
+    margin-bottom 40px
+
+  p
+    max-width 323px
+    margin 0 auto
+    color #ffffff
+    font-family $hLight
+    font-size 1.6rem
+    font-weight 300
+    b
+      font-family $hBold
+      font-weight 600
+
+  &__more
+    max-width 323px
+    margin 0 auto
+    font-size 1.4rem
+    font-weight 400
+    line-height 3.1rem
+    color #ffffff
+    text-decoration underline
+    display block
+    margin-bottom 20px
+    margin-top 10px

@@ -1,0 +1,123 @@
+@import '../core/variables.styl';
+
+.header
+  width 100%
+  position fixed
+  left 0
+  top 0
+  z-index 10
+  padding-bottom 20px
+  transition: .5s ease-out all
+  &.header-active
+    background rgba(255,255,255, .9)
+    padding-bottom 20px
+    +media(1200px)
+      height 80px
+
+  &__container
+    max-width 100%
+    width 1156px
+    margin 0 auto
+    display flex
+    justify-content space-between
+    padding-top 25px
+    font-family 'Lato'
+    +media(1200px)
+      align-items flex-start
+      width calc(100% - 40px)
+    a
+      font-size: 1.6rem
+      color #26272d
+
+.header-nav
+  display flex
+  flex-wrap: wrap
+  width 318px
+  justify-content space-between
+  align-items center
+  +media(1200px)
+    width 260px
+
+.header__right
+  width 440px
+  display flex
+  justify-content space-between
+  align-items center
+  +media(1200px)
+    align-items flex-start
+    width 280px
+  a
+    display block
+    font-size: 1.4rem
+
+  .phone
+    font-size: 1.6rem
+    +media(1200px)
+      display flex
+      align-items center
+    span
+      font-size: 2.6rem
+      padding-left 10px
+
+.burger
+  width 20px
+  height 12px
+  background url(../img/icons/burger.svg) center no-repeat
+
+.parnter
+  margin-top 25px
+  transform-origin: top left
+  transition: .5s ease-out all
+  .header-active &
+    +media(1200px)
+      transform: scaleY(0)
+
+.underline
+  color #26272d
+  text-decoration underline
+.opacity
+  opacity 0.4
+  transition: $fast
+  &:hover
+    opacity 1
+
+.logo
+  width 260px
+  margin 0 auto
+  display flex
+  flex-direction: column
+  justify-content center
+  align-items center
+  position relative
+  top 120px
+  opacity 0
+  transform: scale(0)
+  transition: 1s 1s ease-out all
+  .animated &
+    opacity 1
+    transform: scale(1)
+  p
+    color #26272d
+    font-family Lato
+    font-size 2.4rem
+    font-weight 400
+    line-height 4.2rem
+    padding 0
+    margin 0
+  span
+    font-size: 1rem
+    padding 0 .5em
+  small
+    color #070707
+    font-size 1.4rem
+    font-weight 400
+    line-height 1.3
+
+.logo-top
+  width 83px
+  height 84px
+
+.header-phone
+  position relative
+  +media(1200px)
+    top -5px

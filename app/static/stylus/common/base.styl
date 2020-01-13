@@ -1,0 +1,41 @@
+@import "../core/variables.styl"
+
+*
+  box-sizing border-box
+  -webkit-tap-highlight-color transparent
+
+html
+  font-size: 10px
+  +media(1440px)
+    font-size: 8px
+
+body
+  font 16px/1.5 $mainFont
+  overflow-x: hidden
+
+a,
+button,
+input
+  &:focus
+    outline 0
+
+a
+  text-decoration none
+
+button
+  border: 0
+
+img
+  width 100%
+  height auto
+
+figure
+  margin 0
+
+.ul
+  margin 0
+  padding 0
+  list-style none
+
+.grid
+  min-height: $gridHeight

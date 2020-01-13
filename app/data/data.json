@@ -1,0 +1,12 @@
+{
+	"menu" : {
+		"main": {
+			"name": "Главная",
+      "link": "javascript:void(0)"
+		},
+		"functions": {
+			"name": "Внутренняя",
+      "link": "javascript:void(0)"
+		}
+  }
+}

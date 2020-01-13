@@ -1,0 +1,342 @@
+// .parallax__left
+//   position absolute
+//   width 100%
+//   height 100%
+//   background url(../img/content/top-left.png) center left no-repeat
+//   left 0
+//   top 0
+// .parallax__right
+//   position absolute
+//   width 100%
+//   height 100%
+//   background url(../img/content/top-right.png) center right no-repeat
+//   right 0
+//   top 0
+
+.top
+  position relative
+  top -240px
+  margin-bottom -500px
+  width 100%
+  height 1030px
+  position relative
+  background url(../img/content/top.png) center no-repeat
+  z-index 0
+  background-size cover
+  &:hover,
+  .animated &
+    .plane
+      opacity 1
+      transform: translate(90px)
+  +hd(1920px)
+    background url(../img/content/top.png) top center no-repeat
+    background-size cover
+  +media(1200px)
+    height auto
+    margin-bottom -270px
+
+  &__container
+    width 1400px
+    margin 0 auto
+    +media(1440px)
+      width 1150px
+    +media(1200px)
+      width calc(100% - 40px)
+
+  h1
+    padding-top 340px
+    font-family $hLight
+    color #26272d
+    font-size 6rem
+    font-weight 300
+    line-height 7.3rem
+    margin 0
+    position relative
+    top 50px
+    transition: 1s 1s ease all
+    opacity 0
+    transform: translateX(-100%)
+    +media(1200px)
+      text-align center
+      font-size: 4rem
+      line-height 5.5rem
+    .animated &
+      opacity 1
+      transform: translate(0)
+
+.heading-img
+  position absolute
+  right 0
+  bottom -40px
+  width 390px
+  +media(1200px)
+    position relative
+    margin 0 auto
+    bottom 0
+
+  .plane
+    transition: 2s 1.5s ease-out all
+    opacity 0
+    transform: scale(0.5) translateX(-75px) rotate(25deg)
+    width 280px
+    height 96px
+    position absolute
+    left 0
+    bottom 0
+
+.section-arm
+  &__heading
+    padding 0
+    margin 0
+    margin-top 97px
+    color #26272d
+    font-family $hLight
+    font-size 3rem
+    font-weight 300
+    line-height 5.3rem
+    letter-spacing 0.6px
+    text-align center
+    transition: .5s 1.5s ease-in all
+    transform: scaleY(0)
+    transform-origin: top left
+    opacity 0
+    .animated &
+      opacity 1
+      transform: scale(1)
+
+  &__descr
+    display flex
+    justify-content space-between
+    align-items center
+    width 1185px
+    margin 0 auto
+    transition: 1s 2s ease all
+    opacity 0
+    transform: translateX(100%)
+    .animated &
+      opacity 1
+      transform: translate(0)
+      +media(1200px)
+        display: flex
+        flex-direction: column
+        align-items: flex-start
+        width: 100%
+        transform: translateX(calc(50% - 100px))
+    +media(1440px)
+      width 960px
+    article
+      padding-top 76px
+      color #26272d
+      font-size 2rem
+      font-weight 300
+      line-height 2.8rem
+      position relative
+      +media(1200px)
+        padding-top 25px
+
+.red-dot
+  width 41px
+  height 42px
+  background url(../img/icons/dot.png) center no-repeat
+  background-size cover
+  display block
+  position absolute
+  left -60px
+  bottom 0
+  animation spin 3s infinite linear
+
+.logistic
+  font-family $helLight
+  position relative
+  z-index 1
+  &__container
+    width 1134px
+    margin 0 auto
+    transition: 1s 1s ease-in all
+    opacity 0
+    .animated &
+      opacity 1
+    +media(1440px)
+      width 1050px
+    +media(1200px)
+      width 100%
+    section
+      display flex
+      justify-content space-between
+      +media(1200px)
+        flex-direction: column
+
+  h2
+    text-align center
+    padding-top 55px
+    font-family $hLight
+    margin-bottom 55px
+
+.solution
+  background #ebebeb
+  max-width 380px
+  width calc(100% / 3)
+  display flex
+  flex-direction: column
+  align-items center
+  justify-content flex-start
+  padding 33px 0 49px
+  +media(1200px)
+    width 100%
+    max-width 100%
+  &:hover
+    .solution__bg,
+    .solution__pic
+      transform: scale(1) !important
+      filter: grayscale(0) !important
+  &__pic
+    position relative
+    z-index 1
+    width 244px
+    height 170px
+    transform: scale(1.2)
+    filter: grayscale(.2)
+    transition: $fast
+  &:first-child
+    transition: 1.5s 1.5s ease-out all
+    transform: translateX(-300%)
+    .animated &
+      transform: translate(0)
+    .solution__bg
+      width 343px
+      height 126px
+      background url(../img/content/solution-1_bg.png) center no-repeat
+      background-size cover
+      left -40px
+      top 75px
+      transform: scale(.1)
+      transition: $middle
+  &:nth-child(2n)
+    background #fff
+    transition: 1.5s 1.75s ease-out all
+    transform: translateX(-300%)
+    .animated &
+      transform: translate(0)
+    .solution__bg
+      width 196px
+      height 169px
+      background url(../img/content/solution-2_bg.png) center no-repeat
+      background-size cover
+      left 0px
+      top 10px
+      transform: scale(.1)
+      transition: $middle
+    .solution__pic
+      width 276px
+      height 150px
+  &:nth-child(3)
+    transition: 1.5s 2s ease-out all
+    transform: translateX(-300%)
+    .animated &
+      transform: translate(0)
+    .solution__bg
+      width 206px
+      height 106px
+      background url(../img/content/solution-3_bg.png) center no-repeat
+      background-size cover
+      left -50px
+      top 90px
+      transform: scale(.1)
+      transition: $middle
+    .solution__pic
+      width 88px
+      height 178px
+
+  &__heading
+    color #393939
+    font-size 2.8rem
+    font-weight 400
+    line-height 3.8rem
+    font-weight 500
+    width 250px
+    text-align center
+    b
+      font-weight 900
+      padding-left 0.3em
+
+  &__separator
+    width 248px
+    height 5px
+    background url(../img/icons/line.png) center no-repeat
+    background-size cover
+    margin-top 15px
+
+  &__img
+    position relative
+    padding 50px 0
+    min-height: 285px
+  &__bg
+    position absolute
+    left 0
+    top 0
+    z-index 0
+
+  &__more
+    color #393939
+    font-size 1.4rem
+    font-weight 400
+    line-height 2.4rem
+    text-decoration underline
+    font-family $mainFont
+
+  &__descr
+    position relative
+    width 280px
+    +media(1440px)
+      width 220px
+    +media(1200px)
+      width auto
+    &:hover
+      .solution__descr__dot
+        transform: rotate(-360deg)
+        &::before
+          filter grayscale(0)
+    p
+      color #393939
+      font-family Lato
+      font-size 1.6rem
+      font-weight 300
+      line-height 2.4rem
+      font-family $mainFont
+      letter-spacing 0.32px
+      &:first-child
+        margin-bottom 50px
+    &__dot
+      position absolute
+      top 20px
+      left -32px
+      background url(../img/icons/circle.png) center no-repeat
+      background-size cover
+      width 24px
+      height 24px
+      transition: 2s ease-out all
+      +media(1440px)
+        top 10px
+      &::before
+        content: ''
+        width 5px
+        height 5px
+        position absolute
+        left 8px
+        top 8px
+        position relative
+        display block
+        background #ff8244
+        width 8px
+        height 8px
+        border-radius: 50%
+        filter: grayscale(1)
+        transition: $fast
+
+.top-map
+  opacity 0
+  transition: 1.5s 1.5s ease-out all
+  transform: scale(0)
+  .animated &
+    opacity 1
+    transform: scale(1)

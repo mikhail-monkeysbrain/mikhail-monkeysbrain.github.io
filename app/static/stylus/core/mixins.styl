@@ -1,0 +1,126 @@
+@import '../core/variables.styl';
+@import '../sprite/sprite.styl';
+
+// Mixins
+//
+// Convernted from less by less2stylus
+// Edited by Paul Mikhalev
+// --------------------------------------------------
+
+
+// UTILITY MIXINS
+// --------------------------------------------------
+
+// Sizing shortcuts
+// -------------------------
+size(height, width)
+  width width
+  height height
+
+square(size)
+  size(size, size)
+
+media(maxWidth)
+	@media screen and (max-width: maxWidth)
+		{block}
+
+hd(minWidth)
+	@media screen and (min-width: minWidth)
+		{block}
+
+// Размер блока из массива "width height"
+blockSize(arr)
+  width extract(arr, 1)
+  height extract(arr, 2)
+
+// Placeholder text
+// -------------------------
+placeholder(color=placeholderText)
+  &:-moz-placeholder
+    color color
+  &:-ms-input-placeholder
+    color color
+  &::-webkit-input-placeholder
+    color color
+
+// Text overflow
+// -------------------------
+// Requires inline-block or block for proper styling
+text-overflow()
+  overflow hidden
+  text-overflow ellipsis
+  white-space nowrap
+
+// CSS image replacement
+// -------------------------
+// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+hide-text()
+  font 0/0 a
+  color transparent
+  text-shadow none
+  background-color transparent
+  border 0
+
+// Resize anything
+resizable(direction)
+  resize direction
+  overflow auto
+
+// Подключение фоновой картинки
+bg(name, size=auto, position=50% 50%, repeat=no-repeat)
+  background-image "@{pathToImg}@{name}"
+  background-repeat repeat
+  background-position position
+  background-size size
+
+// Блок с фоновой картинкой по размеру файла
+bgBox(name, position=50% 50%, repeat=no-repeat)
+  imgSize(name)
+  bg(name, imgSize, position, repeat)
+  blockSize(imgSize)
+
+// Растягивает блок на весь экран. Учитывает тулбары на мобильных.
+full-screen() 
+  width: auto !important;
+  height: auto !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  overflow: hidden;
+
+
+// Скрытие текста, не исключая его из потока данных экранных читалок (аналог alt для картинок)
+// возможно не хватает еще пары правил
+sr()
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  position: absolute;
+  clip: rect(1px,1px,1px,1px);
+
+container($width = $widthContent)
+  max-width: $width
+  padding 0 20px
+  margin: 0 auto
+
+// Генерация спрайтов
+spriteWidth($sprite)
+  width: $sprite[4]
+
+spriteHeight($sprite)
+  height: $sprite[5]
+
+spritePosition($sprite)
+  background-position: $sprite[2] $sprite[3]
+
+spriteImage($sprite)
+  background-image: url(../img/sprite.png)
+
+sprite($sprite)
+    if !match('hover', selector()) && !match('active', selector())
+        spriteImage($sprite)
+    spritePosition($sprite)
+    spriteWidth($sprite)
+    spriteHeight($sprite)

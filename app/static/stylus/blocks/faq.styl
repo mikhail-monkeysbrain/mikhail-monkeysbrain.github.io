@@ -1,0 +1,156 @@
+.faq
+  position relative
+  background #fefae1
+  padding-top 60px
+
+  &__right
+    position absolute
+    width 320px
+    height 212px
+    background url(../img/content/cargo-y.png) center no-repeat
+    background-size cover
+    z-index 0
+    top 50px
+    right 0
+    transform: scale(.75)
+
+  h2
+    color #26272d
+    font-family $hLight
+    font-size 4rem
+    font-weight 300
+    line-height 5.3rem
+    letter-spacing 1.6px
+    text-align center
+
+  &__container
+    display flex
+    justify-content space-between
+    align-items flex-end
+    &:hover,
+    .animated &
+      .faq__shadow
+        transform: scale(1) rotate(360deg)
+        right 150px
+        opacity 1
+      .faq__woman
+        opacity 1
+
+  &--col-1
+    width 40%
+    flex-shrink: 0
+    position relative
+    min-height 550px
+
+  &--col-2
+    width 60%
+    min-height 550px
+
+  &__woman
+    position absolute
+    right 50px
+    bottom 0
+    width 290px
+    height 549px
+    z-index 1
+
+  &__shadow
+    position absolute
+    right 100px
+    bottom 150px
+    width 274px
+    height 280px
+    z-index 0
+    transition: 1s 1s ease-out all
+    opacity 0
+    transform: scale(0) rotate(0)
+
+.use
+  h2
+    color #26272d
+    font-family $hLight
+    font-size 4rem
+    font-weight 300
+    line-height 5.3rem
+    letter-spacing 1.6px
+    text-align center
+
+  &__container
+    display flex
+    justify-content space-between
+    align-items center
+    flex-wrap: wrap
+    width 1133px
+    margin 0 auto
+    +media(1440px)
+      width 1050px
+
+  &__item
+    width 50%
+    height 286px
+    position relative
+    padding-left 31px
+    display flex
+    justify-content center
+    flex-direction: column
+    &:nth-child(2)
+      transition: 1s 1s ease-in-out all
+      transform: translateX(-100%)
+      .animated &
+        transform: translate(0)
+    &:nth-child(3)
+      transition: 1s 1s ease-in-out all
+      transform: translateY(-100%)
+      .animated &
+        transform: translate(0)
+    &:nth-child(4)
+      transition: 1s 1s ease-in-out all
+      transform: translate(-100%, -100%)
+      .animated &
+        transform: translate(0)
+    .animated &
+      .use__pic
+        filter: grayscale(.5)
+
+  &__pic
+    position absolute
+    left 0
+    top 0
+    width 100%
+    height 100%
+    z-index -1
+    filter grayscale(1.5)
+    transition: 1.5s 1.5s ease-out all
+
+  &__title
+    color #ffffff
+    font-family $mainFont
+    font-size 1.6rem
+    font-weight 500
+    line-height 2.6rem
+    text-transform uppercase
+
+  &__content
+    margin-left 0
+    padding-left 25px
+    list-style none
+    color #ffffff
+    font-family $mainFont
+    font-size 1.6rem
+    font-weight 300
+    line-height 3.2rem
+
+  &__li
+    position relative
+    &::before
+      content ''
+      display block
+      position absolute
+      left -25px
+      top 10px
+      width 16px
+      height 16px
+      background url(../img/icons/dot.png) center no-repeat
+      background-size cover
+  .button
+    margin-bottom 130px

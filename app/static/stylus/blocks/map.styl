@@ -1,0 +1,151 @@
+.map
+  position relative
+  margin-bottom 100px
+  &-logo
+    width 257px
+    display block
+    margin 50px auto 100px
+    opacity: 0
+    transform: scale(0)
+    transition: 1s 1s ease all
+    .animated &
+      opacity: 1
+      transform: scale(1)
+
+  &:hover
+  &.animated
+    .map__truck
+      transform: translateX(10%)
+      left 50%
+    .map__truck-shadow
+      opacity 1
+      transform: scale(1)
+      transition: 1s 3s ease-in all
+    .map__cargo
+      transform: scale(1)
+      transition: 2s 2s ease-out all
+    .map__shadow
+      transition: 2s 2s ease-out all
+      transform: scale(1)
+      opacity 1
+    .map__items
+      opacity 1
+      transition: 1s 3s ease-in-out all
+
+  h2
+    color #26272d
+    font-family $hLight
+    font-size 4rem
+    font-weight 300
+    line-height 5.3rem
+    letter-spacing 1.6px
+    text-align center
+
+  &__bg
+    width 74.9rem
+    height 51.3rem
+    display block
+    margin 0 auto
+
+  &__truck
+    width 59.4rem
+    height 15.7rem
+    position absolute
+    left 60%
+    bottom 0
+    transition: 2s ease-out all
+    transform: translateX(100%)
+
+  &__truck-shadow
+    width 17.8rem
+    height 8.8rem
+    position absolute
+    left calc(50% + 58rem)
+    transform: scale(0)
+    opacity 0
+    bottom 7.5rem
+    transition: .5s ease-out all
+
+  &__cargo
+    width 16.9rem
+    height 15.1rem
+    position absolute
+    left calc(50% + 40rem)
+    bottom -6.5rem
+    transform: scale(0)
+    transition: .5s ease-out all
+
+
+  &__shadow
+    width 32rem
+    height 21.2rem
+    position absolute
+    left calc(50% - 60rem)
+    bottom 3rem
+    transform: scale(0)
+    opacity 0
+
+  &__items
+    width 63.4rem
+    height 17.8rem
+    position absolute
+    left -2rem
+    right 0
+    margin 0 auto
+    bottom 12rem
+    opacity 0
+
+  &__left
+    width 23.7rem
+    height 14.8rem
+    position absolute
+    top 20rem
+    left 12rem
+    transition: 1.5s 1.5s ease-out all
+    opacity: 0
+    transform: scale(0) rotate(360deg)
+    .animated &
+      transform: scale(1) rotate(0)
+      opacity: 1
+
+  &__right
+    width 32rem
+    height 21.2rem
+    position absolute
+    top 25rem
+    right 0
+    transition: 1.5s 1.5s ease-out all
+    opacity: 0
+    transform: scale(0) rotate(-360deg)
+    .animated &
+      transform: scale(1) rotate(0)
+      opacity: 1
+
+
+.grid > section
+  transition: .75s .5s all
+  opacity 0
+  transform: translateX(100%)
+  transform-origin: (0 0)
+
+.grid > section.animated
+  opacity 1
+  transform: scale(1)
+
+@keyframes spin {
+  from {
+    transform: rotate(0) scale(1)
+  }
+  25% {
+    transform: rotate(90deg) scale(.9)
+  }
+  50% {
+    transform: rotate(180deg) scale(.8)
+  }
+  75% {
+    transform: rotate(90deg) scale(.9)
+  }
+  to {
+    transform: rotate(0deg) scale(1)
+  }
+}
