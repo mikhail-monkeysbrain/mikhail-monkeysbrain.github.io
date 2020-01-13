@@ -27,24 +27,34 @@
     display flex
     justify-content space-between
     align-items flex-end
+    +media(1200px)
+      flex-direction: column-reverse
     &:hover,
     .animated &
       .faq__shadow
         transform: scale(1) rotate(360deg)
         right 150px
         opacity 1
+        +media(1200px)
+          right calc(50% - 45px)
       .faq__woman
         opacity 1
+        +media(1200px)
+          right calc(50% - 145px)
 
   &--col-1
     width 40%
     flex-shrink: 0
     position relative
     min-height 550px
+    +media(1200px)
+      width 100%
 
   &--col-2
     width 60%
     min-height 550px
+    +media(1200px)
+      width 100%
 
   &__woman
     position absolute
@@ -84,6 +94,8 @@
     margin 0 auto
     +media(1440px)
       width 1050px
+    +media(1200px)
+      width 100%
 
   &__item
     width 50%
@@ -121,6 +133,7 @@
     z-index -1
     filter grayscale(1.5)
     transition: 1.5s 1.5s ease-out all
+    object-fit: cover
 
   &__title
     color #ffffff
