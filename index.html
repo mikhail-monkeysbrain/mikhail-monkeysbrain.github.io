@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Rocket To China</title>
     <link rel="stylesheet" href="dist/css/main.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/><link rel="apple-touch-icon" sizes="57x57" href="./dist/img/favicon/apple-icon-57x57.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"/><link rel="apple-touch-icon" sizes="57x57" href="./dist/img/favicon/apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="./dist/img/favicon/apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="./dist/img/favicon/apple-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="76x76" href="./dist/img/favicon/apple-icon-76x76.png">
@@ -34,10 +35,10 @@
         </div>
         <div class="header__right">
           <div class="header-mail">
-            <div class="header-mail__icon"></div><a href="mailto:info@rockettochina.ru">info@rockettochina.ru</a><a class="underline opacity" href="javascript:void(0)">Задать вопрос</a>
+            <div class="header-mail__icon"></div><a href="mailto:info@rockettochina.ru">info@rockettochina.ru</a><a class="underline opacity" data-fancybox="data-fancybox" data-src="#modalQuestion" href="javascript:void(0)">Задать вопрос</a>
           </div>
           <div class="header-phone">
-            <div class="header-phone__icon"></div><a class="phone" href="tel:+74956402968">+7 (495)<span>640-29-68</span></a><a class="opacity" href="javascript:void(0)">Горячая линия поддержки</a>
+            <div class="header-phone__icon"></div><a class="phone" href="tel:+74956402968">+7 (495)<span>640-29-68</span></a><a class="underline opacity" data-fancybox="data-fancybox" data-src="#modalOrder" href="javascript:void(0)">Горячая линия поддержки</a>
           </div>
         </div>
       </div>
@@ -427,7 +428,26 @@
         </div>
       </div>
     </footer>
+    <div id="modalQuestion">
+      <form class="modal-wrapper"><img class="modal-wrapper__right" src="./dist/img/content/cargo.png" alt=""/><img class="modal-wrapper__left" src="./dist/img/content/cargo.png" alt=""/>
+        <h2>Сообщите нам, какой заказ вы бы хотели разместить и мы непременно ответим вам!</h2>
+        <h3>Напишите нам и наши специалисты свяжуться с вами</h3><img class="separator" src="./dist/img/icons/line.png" alt=""/>
+        <input type="text" placeholder="Ваше имя"/>
+        <input type="text" placeholder="Ваш телефон или Email"/><a class="button btn btn--yellow">Отправить</a>
+      </form>
+    </div>
+    <div id="modalOrder">
+      <form class="modal-wrapper"><img class="modal-wrapper__right" src="./dist/img/content/cargo.png" alt=""/><img class="modal-wrapper__left" src="./dist/img/content/cargo.png" alt=""/><img class="modal-wrapper__gray" src="./dist/img/content/cargo.png" alt=""/>
+        <h2>Сообщите нам, какой заказ вы бы хотели разместить и мы непременно ответим вам!</h2>
+        <h3>Напишите нам и наши специалисты свяжуться с вами</h3><img class="separator" src="./dist/img/icons/line.png" alt=""/>
+        <input type="text" placeholder="Ваше имя"/>
+        <input type="text" placeholder="Введите Email"/>
+        <input type="text" placeholder="Введите телефон"/>
+        <textarea name="" cols="30" rows="10"></textarea><a class="button btn btn--yellow">Отправить</a>
+      </form>
+    </div>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="dist/js/app.js"></script>
   </body>
 </html>

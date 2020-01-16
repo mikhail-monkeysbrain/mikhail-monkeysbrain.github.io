@@ -382,3 +382,161 @@
   .animated &
     opacity 1
     transform: scale(1)
+
+#modalQuestion,
+#modalOrder
+  max-width 886px
+  background transparent
+  overflow hidden
+  +media(1200px)
+    width 100%
+    max-width 100%
+
+#modalOrder
+  max-width 1013px
+  width 1013px
+  +media(1200px)
+    width 100%
+    max-width 100%
+
+.modal-wrapper
+  width: 808px
+  height: auto
+  margin 0 auto
+  box-shadow: 0 5px 111px rgba(0, 0, 0, 0.2)
+  border-radius: 10px
+  background-color: #ebebed
+  display flex
+  flex-direction: column
+  justify-content center
+  align-items center
+  position relative
+  padding-top 56px
+  .btn
+    margin 0 20px
+  +media(1200px)
+    width 728px
+    padding: 40px 20px
+    max-width 100%
+
+  h2
+    color #212121
+    font-size 25px
+    font-weight 400
+    line-height 38.03px
+    text-align center
+    margin 0
+    +media(768px)
+      font-size: 16px
+      line-height 1.3
+
+  h3
+    color #212121
+    font-size 13px
+    font-weight 500
+    line-height 1.3
+    text-transform uppercase
+    text-align center
+    +media(768px)
+      font-size: 12px
+      line-height 1.3
+
+  .separator
+    width 248px
+    height 5px
+    opacity 0.3
+    filter: grayscale(1)
+    margin-bottom 36px
+    +media(768px)
+      transform: scale(.75)
+      margin-bottom 16px
+
+  input,
+  textarea
+    width 679px
+    height 69px
+    border-radius 10px
+    background-color #ffffff
+    border: 0
+    outline: none
+    margin-bottom 11px
+    padding 0 34px
+    position relative
+    z-index 1
+    max-width 100%
+    +media(768px)
+      max-width 100%
+      height 45px
+      padding-left 20px
+      font-size: 13px
+
+  textarea
+    padding 26px 34px
+    width 678px
+    height 188px
+    +media(768px)
+      max-width 100%
+      height 100px
+      font-size: 13px
+      padding 10px 20px
+
+button.fancybox-button.fancybox-close-small
+  right: 40px
+  top: 10px
+  transform: scale(1.5)
+  +media(1200px)
+    left 0 !important
+    right 0 !important
+    margin 0 auto
+  +media(768px)
+    top 10px
+  #modalOrder &
+    right 110px
+
+.modal-wrapper__right
+  width: 209px
+  height: 139px
+  position: absolute
+  right: -35px
+  bottom: 70px
+  z-index 0
+  +media(1200px)
+    display none
+  #modalOrder &
+    bottom: initial
+    top: 180px
+    right: -100px
+.modal-wrapper__left
+  width 131px
+  height 86px
+  position absolute
+  z-index 0
+  top 70px
+  left -40px
+  +media(1200px)
+    display none
+  #modalOrder &
+    width: 209px
+    height: 139px
+    top: initial
+    bottom 120px
+    left -100px
+
+.modal-wrapper__gray
+  width: 209px
+  height: 139px
+  top: initial
+  bottom 50px
+  right 50px
+  opacity 0.2
+  transform: scaleX(-1)
+  filter: grayscale(1)
+  position absolute
+  +media(1200px)
+    display none
+
+.fancybox-content
+  +media(768px)
+    padding 20px !important
+  +media(480px)
+    padding 10px !important
