@@ -13,6 +13,8 @@
     top 50px
     right 0
     transform: scale(.75)
+    +media(768px)
+      display none
 
   h2
     color #26272d
@@ -22,6 +24,13 @@
     line-height 5.3rem
     letter-spacing 1.6px
     text-align center
+    +media(768px)
+      padding 0 20px
+      br
+        display none
+    +media(480px)
+      font-size: 3rem
+      line-height 1.3
 
   &__container
     display flex
@@ -49,6 +58,8 @@
     min-height 550px
     +media(1200px)
       width 100%
+    +media(480px)
+      display none
 
   &--col-2
     width 60%
@@ -84,6 +95,14 @@
     line-height 5.3rem
     letter-spacing 1.6px
     text-align center
+    +media(768px)
+      width calc(100% - 20px)
+      margin 30px auto
+      br
+        display none
+    +media(480px)
+      font-size: 3rem
+      line-height 1.3
 
   &__container
     display flex
@@ -105,19 +124,24 @@
     display flex
     justify-content center
     flex-direction: column
+    +media(768px)
+      width 100%
+      height auto
+      padding 20px
+      padding-left 35px
     &:nth-child(2)
-      transition: 1s 1s ease-in-out all
-      transform: translateX(-100%)
-      .animated &
-        transform: translate(0)
-    &:nth-child(3)
       transition: 1s 1s ease-in-out all
       transform: translateY(-100%)
       .animated &
         transform: translate(0)
+    &:nth-child(3)
+      transition: 1s 1s ease-in-out all
+      transform: translateY(-200%)
+      .animated &
+        transform: translate(0)
     &:nth-child(4)
       transition: 1s 1s ease-in-out all
-      transform: translate(-100%, -100%)
+      transform: translateY(-300%)
       .animated &
         transform: translate(0)
     .animated &
@@ -167,3 +191,5 @@
       background-size cover
   .button
     margin-bottom 130px
+    +media(768px)
+      margin-bottom 0

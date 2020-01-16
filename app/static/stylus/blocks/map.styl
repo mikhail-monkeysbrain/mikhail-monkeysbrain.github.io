@@ -8,6 +8,8 @@
     opacity: 0
     transform: scale(0)
     transition: 1s 1s ease all
+    +media(480px)
+      margin 30px auto 50px
     .animated &
       opacity: 1
       transform: scale(1)
@@ -17,20 +19,36 @@
     .map__truck
       transform: translateX(10%)
       left 50%
+      +media(1200px)
+        left: 30%
+      +media(768px)
+        left 0
+      +media(480px)
+        width: 100%
     .map__truck-shadow
       opacity 1
       transform: scale(1)
       transition: 1s 3s ease-in all
+      +media(480px)
+        display: none
     .map__cargo
       transform: scale(1)
       transition: 2s 2s ease-out all
+      +media(480px)
+        display: none
     .map__shadow
       transition: 2s 2s ease-out all
       transform: scale(1)
       opacity 1
+      +media(1200px)
+        display: none
+      +media(480px)
+        display: none
     .map__items
       opacity 1
       transition: 1s 3s ease-in-out all
+      +media(480px)
+        display: none
 
   h2
     color #26272d
@@ -40,12 +58,22 @@
     line-height 5.3rem
     letter-spacing 1.6px
     text-align center
+    +media(768px)
+      width calc(100% - 20px)
+      margin: 0 auto
+      br
+        display none
 
   &__bg
     width 74.9rem
     height 51.3rem
     display block
     margin 0 auto
+    +media(768px)
+      width: 57rem
+      height: auto
+    +media(480px)
+      width: 100%
 
   &__truck
     width 59.4rem
@@ -55,6 +83,10 @@
     bottom 0
     transition: 2s ease-out all
     transform: translateX(100%)
+    +media(768px)
+      width: 45rem
+      height: auto
+      bottom: -5rem
 
   &__truck-shadow
     width 17.8rem
@@ -65,6 +97,8 @@
     opacity 0
     bottom 7.5rem
     transition: .5s ease-out all
+    +media(768px)
+      display: none
 
   &__cargo
     width 16.9rem
@@ -74,6 +108,12 @@
     bottom -6.5rem
     transform: scale(0)
     transition: .5s ease-out all
+    +media(1200px)
+      left: calc(30% + 40rem)
+    +media(768px)
+      left: 35rem
+      width: 12rem
+      height: auto
 
 
   &__shadow
@@ -94,6 +134,10 @@
     margin 0 auto
     bottom 12rem
     opacity 0
+    +media(768px)
+      width: 47.5rem
+      height: auto
+      bottom 9.1rem
 
   &__left
     width 23.7rem
@@ -102,8 +146,8 @@
     top 20rem
     left 12rem
     transition: 1.5s 1.5s ease-out all
-    opacity: 0
-    transform: scale(0) rotate(360deg)
+    +media(768px)
+      display: none
     .animated &
       transform: scale(1) rotate(0)
       opacity: 1
@@ -115,8 +159,8 @@
     top 25rem
     right 0
     transition: 1.5s 1.5s ease-out all
-    opacity: 0
-    transform: scale(0) rotate(-360deg)
+    +media(768px)
+      display: none
     .animated &
       transform: scale(1) rotate(0)
       opacity: 1

@@ -42,6 +42,8 @@
       width 1150px
     +media(1200px)
       width calc(100% - 40px)
+    +media(768px)
+      width calc(100% - 20px)
 
   h1
     padding-top 340px
@@ -60,6 +62,11 @@
       text-align center
       font-size: 4rem
       line-height 5.5rem
+    +media(768px)
+      br
+        display none
+    +media(480px)
+      padding-top 280px
     .animated &
       opacity 1
       transform: translate(0)
@@ -73,6 +80,8 @@
     position relative
     margin 0 auto
     bottom 0
+  +media(480px)
+    width 250px
 
   .plane
     transition: 2s 1.5s ease-out all
@@ -83,6 +92,9 @@
     position absolute
     left 0
     bottom 0
+    +media(480px)
+      width 220px
+      left -50px
 
 .section-arm
   &__heading
@@ -100,6 +112,9 @@
     transform: scaleY(0)
     transform-origin: top left
     opacity 0
+    +media(768px)
+      max-width calc(100% - 20px)
+      margin 97px auto 0
     .animated &
       opacity 1
       transform: scale(1)
@@ -124,6 +139,8 @@
         transform: translateX(calc(50% - 100px))
     +media(1440px)
       width 960px
+    +media(768px)
+      width 100%
     article
       padding-top 76px
       color #26272d
@@ -133,6 +150,8 @@
       position relative
       +media(1200px)
         padding-top 25px
+      +media(480px)
+        width 100%
 
 .red-dot
   width 41px
@@ -144,6 +163,8 @@
   left -60px
   bottom 0
   animation spin 3s infinite linear
+  +media(480px)
+    display none
 
 .logistic
   font-family $helLight
@@ -171,6 +192,11 @@
     padding-top 55px
     font-family $hLight
     margin-bottom 55px
+    +media(768px)
+      width calc(100% - 20px)
+      margin 0 auto
+      br
+        display none
 
 .solution
   background #ebebeb
@@ -197,6 +223,8 @@
     transform: scale(1.2)
     filter: grayscale(.2)
     transition: $fast
+    +media(480px)
+      zoom .8
   &:first-child
     transition: 1.5s 1.5s ease-out all
     transform: translateX(-300%)
@@ -211,6 +239,8 @@
       top 75px
       transform: scale(.1)
       transition: $middle
+      +media(480px)
+        display none
   &:nth-child(2n)
     background #fff
     transition: 1.5s 1.75s ease-out all
@@ -226,6 +256,8 @@
       top 10px
       transform: scale(.1)
       transition: $middle
+      +media(480px)
+        display none
     .solution__pic
       width 276px
       height 150px
@@ -243,6 +275,8 @@
       top 90px
       transform: scale(.1)
       transition: $middle
+      +media(480px)
+        display none
     .solution__pic
       width 88px
       height 178px
@@ -270,6 +304,8 @@
     position relative
     padding 50px 0
     min-height: 285px
+    +media(480px)
+      min-height: auto
   &__bg
     position absolute
     left 0
@@ -291,6 +327,10 @@
       width 220px
     +media(1200px)
       width auto
+      max-width calc(100% - 20px)
+      text-align center
+    +media(768px)
+      max-width calc(100% - 120px)
     &:hover
       .solution__descr__dot
         transform: rotate(-360deg)
@@ -317,6 +357,8 @@
       transition: 2s ease-out all
       +media(1440px)
         top 10px
+      +media(480px)
+        display none
       &::before
         content: ''
         width 5px

@@ -25,9 +25,13 @@
     +media(1200px)
       align-items flex-start
       width calc(100% - 40px)
+    +media(768px)
+      width calc(100% - 20px)
     a
       font-size: 1.6rem
       color #26272d
+      +media(768px)
+        display none
 
 .header-nav
   display flex
@@ -37,6 +41,8 @@
   align-items center
   +media(1200px)
     width 260px
+  +media(768px)
+    width 20px
 
 .header__right
   width 440px
@@ -46,6 +52,12 @@
   +media(1200px)
     align-items flex-start
     width 280px
+  +media(768px)
+    width 55vw
+  +media(480px)
+    width calc(100% - 40px)
+    position relative
+    top -5px
   a
     display block
     font-size: 1.4rem
@@ -58,6 +70,9 @@
     span
       font-size: 2.6rem
       padding-left 10px
+      +media(768px)
+        font-size: 2rem
+        padding-left 5px
 
 .burger
   width 20px
@@ -93,6 +108,8 @@
   opacity 0
   transform: scale(0)
   transition: 1s 1s ease-out all
+  +media(480px)
+    top 70px
   .animated &
     opacity 1
     transform: scale(1)
