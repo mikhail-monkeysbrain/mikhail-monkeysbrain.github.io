@@ -1,0 +1,14 @@
+extends ../base/layout
+
+block header
+  include ../blocks/header-consult
+block main
+  main.grid
+    include ../blocks/top-consult
+    include ../blocks/consult
+    include ../blocks/features
+  include ../blocks/footer
+  include ../blocks/modals
+
+block scripts
+  include ../base/scripts

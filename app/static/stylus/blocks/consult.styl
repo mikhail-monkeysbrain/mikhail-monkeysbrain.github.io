@@ -1,0 +1,148 @@
+.consult
+  &.logistic
+    position relative
+    top 0
+  .solution-section
+    width 1185px
+
+    .solution__descr
+      width 210px
+      margin-left 30px
+
+    .solution
+      width 25%
+      justify-content space-between
+
+      &:nth-child(1)
+        .solution__pic
+          width 74px
+          height 116px
+        .solution__bg
+          background: url(../img/content/consult/s-1b.png) center no-repeat
+          left -130px
+          top 55px
+
+      &:nth-child(2)
+        .solution__pic
+          width 181px
+          height 119px
+        .solution__bg
+          background: url(../img/content/consult/s-2b.png) center no-repeat
+          left: -40px
+          top: 25px
+          width: 255px
+
+      &:nth-child(3)
+        .solution__pic
+          width 162px
+          height 98px
+        .solution__bg
+          background: url(../img/content/consult/s-3b.png) center no-repeat
+          width 211px
+          height 65px
+          left -25px
+          top 65px
+
+      &:nth-child(4)
+        .solution__pic
+          width 123px
+          height 73px
+        .solution__bg
+          background: url(../img/content/consult/s-4b.png) center no-repeat
+          left: -65px
+          top: 15px
+          width: 260px
+
+      .solution__img
+        min-height: auto
+
+.features
+  background #fefae1
+  padding 60px
+  position relative
+
+  &__left,
+  &__right
+    width 320px
+    height 212px
+    position absolute
+    z-index 0
+    .animated &
+      transform: scale(1)
+
+  &__left
+    left 150px
+    top 300px
+    transition: 1s 2s ease-out all
+    transform: scale(0) rotate(360deg)
+
+  &__right
+    right 150px
+    bottom 200px
+    transition: 1s 2s ease-out all
+    transform: scale(0) rotate(-360deg)
+
+  h2
+    color #26272d
+    font-size 4rem
+    font-weight 300
+    line-height 5.3rem
+    letter-spacing 0.16rem
+    text-align center
+
+  &__wrapper
+    width 1134px
+    display flex
+    flex-wrap: wrap
+    justify-content space-between
+    align-items center
+    margin 0 auto
+
+.features-item
+  color #ffffff
+  padding 44px 30px
+  position relative
+  z-index 1
+  opacity 0
+  .animated &
+    opacity 1 !important
+    transform: translate(0) !important
+  h3
+    color #ffffff
+    font-size 2.2rem
+    font-weight 500
+    line-height 2.6rem
+  p
+    color #ffffff
+    font-size 1.6rem
+    font-weight 300
+    line-height 2.4rem
+    font-family $hLight
+    b
+      font-weight 700
+      text-transform uppercase
+      font-family $hBold
+  &:nth-child(1)
+    width 50%
+    background url(../img/content/consult/f-1.jpg) center no-repeat
+    background-size cover
+    transition: 1s 1s ease-out all
+  &:nth-child(2)
+    width 50%
+    background url(../img/content/consult/f-2.jpg) center no-repeat
+    background-size cover
+    transform: translateX(-100%)
+    transition: 1.25s 1.25s ease-out all
+  &:nth-child(3)
+    width 100%
+    background url(../img/content/consult/f-3.jpg) center no-repeat
+    background-size cover
+    transform: translateY(-100%)
+    transition: 1.5s 1.5s ease-out all
+
+.btn__wrapper--consult
+  display flex
+  justify-content space-between
+  align-items center
+  margin 0 auto
+  width 600px

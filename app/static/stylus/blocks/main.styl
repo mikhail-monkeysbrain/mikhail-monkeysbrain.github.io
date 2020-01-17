@@ -23,6 +23,12 @@
   background url(../img/content/top.png) center no-repeat
   z-index 0
   background-size cover
+
+  .consult &
+    background url(../img/content/consult/cons-top.jpg) center no-repeat
+    z-index -1
+    height 1300px
+
   &:hover,
   .animated &
     .plane
@@ -58,6 +64,8 @@
     transition: 1s 1s ease all
     opacity 0
     transform: translateX(-100%)
+    .consult &
+      padding-top 500px
     +media(1200px)
       text-align center
       font-size: 4rem
@@ -262,7 +270,7 @@
       width 276px
       height 150px
   &:nth-child(3)
-    transition: 1.5s 2s ease-out all
+    transition: 1.5s 2.25s ease-out all
     transform: translateX(-300%)
     .animated &
       transform: translate(0)
@@ -280,6 +288,11 @@
     .solution__pic
       width 88px
       height 178px
+  &:nth-child(4)
+    transition: 1.5s 2s ease-out all
+    transform: translateX(-400%)
+    .animated &
+      transform: translate(0)
 
   &__heading
     color #393939
