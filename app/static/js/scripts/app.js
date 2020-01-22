@@ -61,17 +61,42 @@ function _scroll() {
 }
 
 function _counters() {
-  $('.animated .jsCounter').each(function() {
-    $(this).prop('Counter', 0).animate({
-      Counter: $(this).text()
-    }, {
-      duration: 5000,
-      easing: 'swing',
-      step: function(now) {
-        $(this).text(Math.ceil(now));
-      }
-    });
-  });
+  // $('.animated .jsCounter').each(function() {
+  //   $(this).prop('Counter', 0).animate({
+  //     Counter: $(this).text()
+  //   }, {
+  //     duration: 5000,
+  //     easing: 'swing',
+  //     step: function(now) {
+  //       $(this).text(Math.ceil(now));
+  //     }
+  //   });
+  // });
+
+
+  function start_count() {
+    $('.jsCounter').each(function () {
+        $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 2500,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now));
+          }
+        })
+    })
+  }
+
+  $(function() {
+    var oTop = $('.jsCounter').offset().top - window.innerHeight
+    $(window).scroll(function(){
+        var pTop = $(window).scrollTop()
+        if( pTop > oTop ){
+            start_count()
+        }
+    })
+  })
 }
 
 $(document).ready(

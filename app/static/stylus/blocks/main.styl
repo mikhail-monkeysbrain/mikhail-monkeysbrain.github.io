@@ -13,6 +13,9 @@
     background url(../img/content/consult/cons-top.jpg) center no-repeat
     z-index -1
     height 1300px
+    +media(1200px)
+      height auto
+      padding-bottom 100px
 
   &:hover,
   .animated &
@@ -51,6 +54,10 @@
     transform: translateX(-100%)
     .consult &
       padding-top 500px
+      +media(1200px)
+        padding-top 350px
+        br
+          display none
     +media(1200px)
       text-align center
       font-size: 4rem
@@ -170,6 +177,8 @@
     opacity 0
     .consult &
       width 1185px
+      +media(1200px)
+        max-width 100%
     .animated &
       opacity 1
     +media(1440px)

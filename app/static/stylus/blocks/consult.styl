@@ -4,6 +4,12 @@
     top 0
   .solution-section
     width 1185px
+    +media(1200px)
+      width 100%
+      margin 0 auto
+      display flex
+      flex-wrap: wrap
+      flex-direction: row
 
     .solution__descr
       width 210px
@@ -12,6 +18,18 @@
     .solution
       width 25%
       justify-content space-between
+      +media(1200px)
+        width 50%
+        &:nth-child(3)
+          background #fff
+        &:nth-child(4)
+          background #ebebeb
+      +media(768px)
+        width 100%
+        &:nth-child(3)
+          background #ebebeb
+        &:nth-child(4)
+          background #fff
 
       &:nth-child(1)
         .solution__pic
@@ -60,6 +78,8 @@
   background #fefae1
   padding 60px
   position relative
+  +media(1200px)
+    padding 0
 
   &__left,
   &__right
@@ -67,6 +87,8 @@
     height 212px
     position absolute
     z-index 0
+    +media(768px)
+      display none
     .animated &
       transform: scale(1)
 
@@ -89,9 +111,14 @@
     line-height 5.3rem
     letter-spacing 0.16rem
     text-align center
+    +media(1200px)
+      padding 40px 40px 0
+      br
+        display none
 
   &__wrapper
     width 1134px
+    max-width 100%
     display flex
     flex-wrap: wrap
     justify-content space-between
@@ -120,6 +147,9 @@
     font-family $hLight
     padding-left 31px
     position relative
+    +media(768px)
+      font-size: 2rem
+      line-height 3rem
     &::after
       width 16px
       height 16px
@@ -139,18 +169,24 @@
     background url(../img/content/consult/f-1.jpg) center no-repeat
     background-size cover
     transition: 1s 1s ease-out all
+    +media(768px)
+      width 100%
   &:nth-child(2)
     width 50%
     background url(../img/content/consult/f-2.jpg) center no-repeat
     background-size cover
     transform: translateX(-100%)
     transition: 1.25s 1.25s ease-out all
+    +media(768px)
+      width 100%
   &:nth-child(3)
     width 100%
     background url(../img/content/consult/f-3.jpg) center no-repeat
     background-size cover
     transform: translateY(-100%)
     transition: 1.5s 1.5s ease-out all
+    +media(768px)
+      width 100%
 
 .btn__wrapper--consult
   display flex
@@ -158,6 +194,13 @@
   align-items center
   margin 0 auto
   width 600px
+  +media(768px)
+    max-width 100%
+    flex-direction: column
+    align-items center
+    justify-content center
+    .btn
+      margin 2rem 0
 
 .shema
   background url(../img/content/consult/chema.jpg) center no-repeat
@@ -184,78 +227,120 @@
     position relative
     padding-bottom 435px
     +media(1440px)
-      transform: scale(.8)
+      display flex
+      padding-bottom 0
+      flex-wrap: wrap
+      justify-content space-between
+      width: 1134px
+      max-width 100%
+    +media(1200px)
+      flex-direction: column
+      padding 0 20px
 
-.trust
-  &__num
-    position: absolute
-    right: 190px
-    top: 10px
-    background: #ffc706
-    width: 40px
-    height: 40px
-    display: flex
-    justify-content: center
-    align-items: center
-    border-radius: 50%
-    color: #fff
-    font-size: 2rem
-  &__pic
-    width 171px
-    height 161px
-    align-self: center
-  &__item--shema
-    position absolute
-    width 540px
-    max-width initial
-    justify-content flex-start
-    align-items flex-start
-    b
-      color #262626
-      font-size 16px
-      font-weight bold
-      font-family $hBold
-      line-height 24px
-      text-transform uppercase
-      padding 20px 0
-    p
-      padding-left: 31px
-      position relative
-      margin 5px 0
-      &::after
-        width 16px
-        height 16px
-        content: ''
-        display block
-        background url(../img/icons/dot.png) center no-repeat
-        background-size cover
-        position absolute
-        left 0
-        top 5px
-      &:nth-child(2n)
-        &::after
-          filter: grayscale(1)
-    &.s--1
-      left 18rem
-      top 2rem
-    &.s--2
-      right 5rem
-      top 2rem
-    &.s--3
-      right 5rem
-      top 44rem
-    &.s--4
-      left 18rem
-      top 52rem
-    &.s--5
-      left 18rem
-      top 109rem
-      width 845px
-      .trust__pic
+.shema__container
+  .trust
+    &__num
+      position: absolute
+      right: 190px
+      top: 10px
+      background: #ffc706
+      width: 40px
+      height: 40px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 50%
+      color: #fff
+      font-size: 2rem
+      +media(1200px)
+        left: 0
+    &__pic
+      width 171px
+      height 161px
+      align-self: center
+      +media(1200px)
         align-self: flex-start
-      .trust__num
-        right initial
-        left 110px
+    &__item--shema
+      position absolute
+      width 540px
+      max-width initial
+      justify-content flex-start
+      align-items flex-start
+      +media(1440px)
+        position relative
+        left 0 !important
+        right 0 !important
+        top 0 !important
+        bottom 0 !important
+        width 45%
+      +media(1200px)
+        width 100%
+        margin-top 50px
+      b
+        color #262626
+        font-size 16px
+        font-weight bold
+        font-family $hBold
+        line-height 24px
+        text-transform uppercase
+        padding 20px 0
+      p
+        padding-left: 31px
+        position relative
+        margin 5px 0
+        &::after
+          width 16px
+          height 16px
+          content: ''
+          display block
+          background url(../img/icons/dot.png) center no-repeat
+          background-size cover
+          position absolute
+          left 0
+          top 5px
+        &:nth-child(2n)
+          &::after
+            filter: grayscale(1)
+      &.s--1
+        left 18rem
+        top 2rem
+      &.s--2
+        right 5rem
+        top 2rem
+      &.s--3
+        right 5rem
+        top 44rem
+        +media(1440px)
+          margin-top 30px
+      &.s--4
+        left 18rem
+        top 52rem
+      &.s--5
+        left 18rem
+        top 109rem
+        width 845px
+        +media(1440px)
+          margin-top -80px
+          width 75%
+        +media(1200px)
+          margin-top 50px
+          max-width calc(100% - 300px)
+        +media(768px)
+          max-width 100%
+          width 100%
+        .trust__pic
+          align-self: flex-start
+          +media(1440px)
+            margin-left 170px
+          +media(1200px)
+            margin-left 0
+        .trust__num
+          right initial
+          left 110px
+          +media(1440px)
+            left 285px
+          +media(1200px)
+            left 0
 
 .shema-woman
   width 401px
@@ -263,6 +348,15 @@
   position absolute
   right -60px
   bottom 0
+  +media(1440px)
+    transform: scale(0.7)
+    transform-origin: bottom right
+    bottom: -120px
+    right: 0
+  +media(768px)
+    display none
+
+
 .shema-shadow-woman
   right: -130px
   width: 274px
@@ -270,6 +364,17 @@
   bottom: 300px
   z-index: -1
   position absolute
+  +media(1440px)
+    transform: scale(0.7)
+    transform-origin: bottom right
+    bottom: 150px
+    right: 0
+  +media(768px)
+    display none
+
+.shema-path
+  +media(1440px)
+    display none
 
 .consult-faq
   background: linear-gradient(to bottom, #fefae1 70%, transparent 100%)
@@ -310,6 +415,16 @@
   .number
     p
       color #ffffff
+      text-shadow: 1px 1px 1px #000
 
 .footer
   position relative
+
+.consult
+  .section-arm__descr
+    article
+      .red-dot
+        bottom 6px
+      &:nth-child(2)
+        .red-dot
+          bottom -6px

@@ -1,0 +1,17 @@
+extends ../base/layout
+
+block header
+  include ../blocks/header-consult
+block main
+  main.grid
+    include ../blocks/top-mining
+    include ../blocks/consult
+    include ../blocks/features
+    include ../blocks/shema
+    include ../blocks/consult-faq
+    include ../blocks/consult-bottom
+  include ../blocks/footer
+  include ../blocks/modals
+
+block scripts
+  include ../base/scripts
