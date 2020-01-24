@@ -10,13 +10,154 @@
     font-size: 5rem
     letter-spacing: -1px
     margin 0 auto
+    padding-top 300px
+    line-height 1.2
+
+
+.consult.mining
+ .solution-section
+    .solution
+      background transparent !important
+      &:nth-child(1)
+        .solution__pic
+          width 100px
+          height 94px
+        .solution__bg
+          top 40px
+        .solution__heading
+          position relative
+          top -2rem
+      &:nth-child(2)
+        .solution__pic
+          width 116px
+          height 116px
+          position relative
+          left 30px
+        .solution__bg
+          left -70px
+      &:nth-child(3)
+        .solution__pic
+          width 106px
+          height 102px
+        .solution__bg
+          transition: .5s ease all
+        &:hover
+          .solution__bg
+            transform rotate(40deg) translateX(-30px) !important
+            transition: .5s ease all
+      &:nth-child(4)
+        .solution__pic
+          width 110px
+          height 113px
+      .solution__heading
+        font-size: 2rem
+        line-height 3rem
+
+
+.consult.mining
+  top: -120px
+  margin-bottom: -120px
+
+
 
 .logo--mining
   position relative
   z-index 1
   width 256px
   height 176px
-  top 85px
+  top 55px
   .logo-top
     width 100%
     height auto
+
+.shop
+  background #fefae1
+  h2
+    span
+      color #26272d
+      font-size 2rem
+      font-weight 300
+      line-height 5rem
+      letter-spacing 0.8px
+      display block
+
+.shop-section
+  width 1146px
+  max-width 100%
+  margin 0 auto
+  display flex
+  justify-content space-between
+  align-items flex-start
+  flex-wrap: wrap
+
+.shop-item
+  background #fff
+  width calc(25% - 5px)
+  display flex
+  flex-direction: column
+  align-items center
+  justify-content center
+  padding 41px 11px 21px
+  position relative
+  z-index 1
+  margin-bottom 10px
+
+  &__img
+    margin-bottom 40px
+    height 170px
+    width auto
+
+  h3
+    margin 0
+
+  .solution__separator
+    filter: grayscale(1)
+    width 248px
+    height 5px
+    margin-bottom 30px
+    opacity 0.3
+
+  .button
+    max-width 100%
+    margin 10px 0
+
+.miners.faq
+  background #f8f2cd
+  position relative
+  .faq--col-1,
+  .faq--col-2
+    min-height: 450px
+
+
+.news.miners
+  background #fff
+  h2
+    text-transform uppercase
+  .news__container
+    margin-bottom 120px
+
+.bitmain
+  width 716px
+  height 97px
+  transform: scale(0)
+  transition: 1s 1s ease all
+  .animated &
+    transform: scale(1)
+
+.miners-separator
+  width 1170px
+  height 1px
+  background-color #e1e1e1
+  margin 20px auto
+
+.miners-end-shadow
+  position absolute
+  left: 10%
+  bottom: 150px
+  width 319px
+  height 224px
+  opacity 0.75
+  transform: scale(0)
+  transition: 1s 1s ease all
+  .animated &
+    transform: scale(1) rotate(360deg)
